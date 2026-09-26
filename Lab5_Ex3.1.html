@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lợi ích của công nghệ số trong học tập</title>
+    <style>
+      :root {
+        --bg: #f3f9ff;
+        --card: #ffffff;
+        --primary: #0a3d62;
+        --accent: #2bb5f4;
+        --accent-2: #7dd3fc;
+        --text: #1d2b3a;
+        --muted: #4e5d6a;
+        --line: #dfeaf8;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #eaf6ff 0%, #f9fdff 100%);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 18px 48px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 3vw, 3.2rem);
+        line-height: 1.2;
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .subtitle {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(18, 55, 76, 0.08);
+        padding: 18px;
+      }
+
+      .infographic {
+        width: 100%;
+        display: block;
+        border-radius: 16px;
+      }
+
+      .video-wrap {
+        margin-top: 26px;
+        background: #edf7ff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+
+      .video-wrap iframe {
+        width: 100%;
+        height: 520px;
+        border: none;
+        border-radius: 12px;
+        display: block;
+      }
+
+      .source {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      footer {
+        margin-top: 18px;
+        text-align: center;
+        color: var(--primary);
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+
+      @media (max-width: 768px) {
+        .container { padding: 22px 12px 30px; }
+        .video-wrap iframe { height: 260px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Lợi ích của công nghệ số trong học tập</h1>
+        <div class="subtitle">Công nghệ số giúp học tập hiệu quả, linh hoạt và sáng tạo hơn.</div>
+      </div>
+
+      <div class="card">
+        <img
+          class="infographic"
+          src="Lab05_Ex2.1.png"
+          alt="Infographic lợi ích của công nghệ số trong học tập"
+        />
+      </div>
+
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/Rp94d4sgfHY"
+          title="Video YouTube về lợi ích công nghệ số trong học tập"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="source">Nguồn: Canva AI, Unsplash (CC0)</div>
+      <footer>© 2025 - Thiết kế infographic học tập hiện đại</footer>
+    </div>
+  </body>
+</html>
