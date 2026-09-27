@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lợi ích của công nghệ số trong học tập</title>
+    <title>Trang Giới Thiệu Cá Nhân</title>
     <style>
       :root {
-        --bg: #f3f9ff;
+        --bg: #eef7ff;
         --card: #ffffff;
-        --primary: #0a3d62;
-        --accent: #2bb5f4;
-        --accent-2: #7dd3fc;
-        --text: #1d2b3a;
-        --muted: #4e5d6a;
-        --line: #dfeaf8;
+        --primary: #123d5a;
+        --secondary: #2f9ae4;
+        --accent: #dff3ff;
+        --text: #1f2d3d;
+        --muted: #596978;
+        --line: #d9eaf8;
       }
 
       * { box-sizing: border-box; }
@@ -21,114 +21,223 @@
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(180deg, #eaf6ff 0%, #f9fdff 100%);
+        background: linear-gradient(180deg, #edf7ff 0%, #f7fbff 100%);
         color: var(--text);
       }
 
       .container {
         max-width: 1100px;
         margin: 0 auto;
-        padding: 32px 18px 48px;
+        padding: 32px 18px 50px;
       }
 
       .header {
         text-align: center;
-        margin-bottom: 24px;
+        margin-bottom: 28px;
       }
 
-      h1 {
+      .header h1 {
         margin: 0;
-        font-size: clamp(2rem, 3vw, 3.2rem);
-        line-height: 1.2;
+        font-size: clamp(2rem, 4vw, 3.2rem);
         color: var(--primary);
-        text-transform: uppercase;
         letter-spacing: 0.04em;
       }
 
-      .subtitle {
-        margin-top: 12px;
-        color: var(--muted);
+      .header p {
+        margin: 12px auto 0;
+        max-width: 720px;
         font-size: 1.05rem;
+        color: var(--muted);
       }
 
-      .card {
+      .profile {
         background: var(--card);
         border: 1px solid var(--line);
         border-radius: 20px;
-        box-shadow: 0 10px 25px rgba(18, 55, 76, 0.08);
-        padding: 18px;
+        box-shadow: 0 12px 32px rgba(16, 61, 95, 0.08);
+        padding: 24px;
+        margin-bottom: 28px;
       }
 
-      .infographic {
-        width: 100%;
-        display: block;
-        border-radius: 16px;
+      .profile-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
       }
 
-      .video-wrap {
-        margin-top: 26px;
-        background: #edf7ff;
+      .info-item {
+        background: var(--accent);
         border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 18px;
+        border-radius: 14px;
+        padding: 18px 20px;
       }
 
-      .video-wrap iframe {
-        width: 100%;
-        height: 520px;
-        border: none;
-        border-radius: 12px;
+      .label {
         display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 8px;
       }
 
-      .source {
-        margin-top: 22px;
-        text-align: center;
+      .value {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 22px;
+        margin-top: 10px;
+      }
+
+      .product-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(18, 55, 76, 0.06);
+        padding: 20px;
+      }
+
+      .product-card h2 {
+        margin-top: 0;
+        margin-bottom: 14px;
+        font-size: 1.25rem;
+        color: var(--primary);
+      }
+
+      .pdf-box,
+      .image-box,
+      .video-box {
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: #f7fbff;
+      }
+
+      .pdf-box {
+        height: 420px;
+      }
+
+      .pdf-box embed,
+      .pdf-box object {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .image-box img {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: #fff;
+      }
+
+      .video-box iframe {
+        display: block;
+        width: 100%;
+        height: 290px;
+        border: none;
+      }
+
+      .download-link {
+        display: inline-block;
+        margin-top: 12px;
+        color: var(--secondary);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .download-link:hover { text-decoration: underline; }
+
+      .ai-note {
+        margin-top: 24px;
+        padding: 12px 16px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #f3f9ff;
         color: var(--muted);
-        font-size: 0.96rem;
+        font-size: 0.95rem;
+        text-align: center;
       }
 
       footer {
-        margin-top: 18px;
+        margin-top: 30px;
         text-align: center;
         color: var(--primary);
-        font-size: 0.95rem;
         font-weight: 700;
       }
 
       @media (max-width: 768px) {
-        .container { padding: 22px 12px 30px; }
-        .video-wrap iframe { height: 260px; }
+        .container { padding: 22px 12px 36px; }
+        .pdf-box { height: 320px; }
+        .video-box iframe { height: 220px; }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <h1>Lợi ích của công nghệ số trong học tập</h1>
-        <div class="subtitle">Công nghệ số giúp học tập hiệu quả, linh hoạt và sáng tạo hơn.</div>
+      <header class="header">
+        <h1>GIỚI THIỆU CÁ NHÂN</h1>
+        <p>Xin chào! Đây là trang giới thiệu ngắn gọn về bản thân tôi cùng các sản phẩm học tập đã hoàn thành.</p>
+      </header>
+
+      <section class="profile" aria-label="Thông tin cá nhân">
+        <div class="profile-grid">
+          <div class="info-item">
+            <span class="label">Họ tên</span>
+            <span class="value">[Họ tên của bạn]</span>
+          </div>
+          <div class="info-item">
+            <span class="label">MSSV</span>
+            <span class="value">[MSSV của bạn]</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Lớp</span>
+            <span class="value">[Tên lớp của bạn]</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="products" aria-label="Danh sách sản phẩm">
+        <article class="product-card">
+          <h2>1. File PDF</h2>
+          <div class="pdf-box">
+            <embed src="Lab05_Ex1.2.pdf" type="application/pdf" title="File PDF Lab05_Ex1.2" />
+          </div>
+          <a class="download-link" href="Lab05_Ex1.2.pdf" target="_blank" rel="noopener noreferrer">Mở / Tải file PDF</a>
+        </article>
+
+        <article class="product-card">
+          <h2>2. Hình ảnh PNG</h2>
+          <div class="image-box">
+            <img src="Lab05_Ex2.1.png" alt="Hình ảnh sản phẩm 2" />
+          </div>
+          <a class="download-link" href="Lab05_Ex2.1.png" target="_blank" rel="noopener noreferrer">Xem ảnh kích thước đầy đủ</a>
+        </article>
+
+        <article class="product-card">
+          <h2>3. Video YouTube</h2>
+          <div class="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/ysz5S6PUM-U"
+              title="Video YouTube giới thiệu"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </article>
+      </section>
+
+      <div class="ai-note">
+        Ghi chú nguồn AI: Trang web này được hỗ trợ và tối ưu hóa bằng trí tuệ nhân tạo trong quá trình xây dựng nội dung và thiết kế giao diện.
       </div>
 
-      <div class="card">
-        <img
-          class="infographic"
-          src="Lab05_Ex2.1.png"
-          alt="Infographic lợi ích của công nghệ số trong học tập"
-        />
-      </div>
-
-      <div class="video-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/Rp94d4sgfHY"
-          title="Video YouTube về lợi ích công nghệ số trong học tập"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="source">Nguồn: Canva AI, Unsplash (CC0)</div>
-      <footer>© 2025 - Thiết kế infographic học tập hiện đại</footer>
+      <footer>© 2026 - Trang giới thiệu cá nhân</footer>
     </div>
   </body>
 </html>
